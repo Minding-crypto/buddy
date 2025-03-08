@@ -26,8 +26,8 @@ const ProfileFooter = () => {
       </div>
       
       <div className="legal-links">
-        <a href="/privacy" className="legal-link">Privacy Policy</a>
-        <a href="/terms" className="legal-link">Terms & Conditions</a>
+      <div className='cftc' onClick={() => navigate('/terms')}>Terms and Conditions</div >
+      <div className='cftc' onClick={() => navigate('/privacy')}>Privacy Policy</div >
       </div>
       
       <div className="copyright">

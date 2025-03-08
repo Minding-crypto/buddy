@@ -75,21 +75,17 @@ const Garden = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setScreenDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight
-      });
+      // Remove this part:
+      // setScreenDimensions({
+      //   width: window.innerWidth,
+      //   height: window.innerHeight
+      // });
       setIsMobile(window.innerWidth < 768);
     };
     
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
-  const [screenDimensions, setScreenDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight
-  });
 
 
   

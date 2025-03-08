@@ -55,12 +55,13 @@ const HomePage = () => {
   const heroScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
 
   // Auto-rotate testimonials - Fixed the duplicate comments and syntax
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTestimonial(prev => (prev + 1) % reviews.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [reviews.length]); 
+// After (fixed):
+useEffect(() => {
+  const interval = setInterval(() => {
+    setActiveTestimonial(prev => (prev + 1) % reviews.length);
+  }, 5000);
+  return () => clearInterval(interval);
+}, []); // Empty dependency array since no component state/props are used
 
   useEffect(() => {
     let lastScrollTop = 0;

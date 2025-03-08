@@ -120,7 +120,7 @@ const GardeningGuidelines = () => {
         </div>
         
         <div className="last-updated">
-          <p className="gardening-p">Last updated: March 7, 2025</p>
+          <p className="gardening-p">Last updated: 2025</p>
         </div>
       </div>
       

@@ -114,23 +114,9 @@ const GardeningGuidelines = () => {
           <h2 className="gardening-h2">Privacy and Community Recognition</h2>
           <p className="gardening-p">
             Respect the privacy and anonymity of community members. Do not share personal 
-            information without consent. Helpful users earn recognition in the community 
-            through our "Master Gardener" badges and special flair.
+            information without consent. 
           </p>
-          <div className="badges">
-            <div className="badge">
-              <div className="badge-icon">🌼</div>
-              <p className="gardening-p">Helpful Contributor</p>
-            </div>
-            <div className="badge">
-              <div className="badge-icon">🌲</div>
-              <p className="gardening-p">Sustainable Gardener</p>
-            </div>
-            <div className="badge">
-              <div className="badge-icon">🏆</div>
-              <p className="gardening-p">Master Gardener</p>
-            </div>
-          </div>
+         
         </div>
         
         <div className="last-updated">

@@ -1,0 +1,220 @@
+.deck-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.nintendo-div {
+  width: 100%;
+  height: 85%;
+  position: relative;
+}
+
+@media (min-width: 768px) { /* Adjust breakpoint as needed */
+  .nintendo-div {
+    width: 50%;
+  }
+  .profile{
+    height: 30px;
+    width: 30px;
+  }
+ 
+}
+
+.nintendo-img{
+  width: 100%;
+  height: 100%;
+}
+
+/* Base button styles */
+.swipe-right { 
+  position: absolute; 
+  right: 8.6%; 
+  bottom: 9.7%; 
+  height: 9%; 
+  width: 15%; 
+  background: none; 
+  background-color: rgba(255, 255, 255, 0); 
+  cursor: pointer; 
+  border: none;
+  /* Add slight shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Smooth transitions for all effects */
+  transition: transform 0.12s cubic-bezier(0.17, 0.67, 0.83, 0.67), 
+              box-shadow 0.12s ease, 
+              filter 0.15s ease;
+} 
+ 
+.swipe-left { 
+  position: absolute; 
+  left: 9%; 
+  bottom: 9.6%; 
+  height: 9%; 
+  width: 15%; 
+  background-color: rgba(255, 255, 255, 0); 
+  border: none; 
+  cursor: pointer;
+  /* Add slight shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Smooth transitions for all effects */
+  transition: transform 0.12s cubic-bezier(0.17, 0.67, 0.83, 0.67), 
+              box-shadow 0.12s ease, 
+              filter 0.15s ease;
+} 
+
+/* Hover effect - subtle growth and glow */
+.swipe-left:hover:not(:disabled), 
+.swipe-right:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.1);
+}
+
+/* Active/press effect - realistic press down */
+.swipe-left:active:not(:disabled), 
+.swipe-right:active:not(:disabled),
+.swipe-left.button-animating,
+.swipe-right.button-animating { 
+  transform: scale(0.92) translateY(3px); 
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  filter: brightness(0.95);
+}
+
+/* Disabled state */
+.swipe-left:disabled, 
+.swipe-right:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+  box-shadow: none;
+  filter: grayscale(0.7);
+}
+
+/* Card swipe animations */
+@keyframes swipeLeftAnimation {
+  from {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-150px) rotate(-10deg);
+  }
+}
+
+@keyframes swipeRightAnimation {
+  from {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(150px) rotate(10deg);
+  }
+}
+
+.swipe-left-animation {
+  animation: swipeLeftAnimation 300ms forwards;
+}
+
+.swipe-right-animation {
+  animation: swipeRightAnimation 300ms forwards;
+}
+
+.screen {
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0);
+  bottom: 29%;
+  width: 72%;
+  height: 60%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: 50%;   /* Move the left edge to the center */
+  transform: translateX(-50%); 
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: "Jersey 15", sans-serif;
+  animation: slideInRight 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+
+.problem-ps {
+  margin-top: 10px;
+  width: 75%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 75%;
+}
+
+@media (max-width: 768px) { 
+  .problem-ps {
+    width: 55%;
+    max-width: 55%;
+  }
+}
+
+
+.problem-pss{
+  margin-top: 10px;
+  margin-bottom: 30px;
+width: 75%;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+justify-self: center;
+}
+
+.profile{
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+
+/* Loading Animation Styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.loading-sprite {
+  width: 32px;
+  height: 32px;
+  scale: 3;
+  background-image: url('../Images/kitty.png'); /* Update path if needed */
+  background-repeat: no-repeat;
+  animation: sprite-animation 1s steps(8) infinite;
+}
+
+@keyframes sprite-animation {
+  from { background-position: 0 0; }
+  to { background-position: -256px 0; } /* 8 frames × 32px = 256px */
+}
+
+.screen-contents{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+}

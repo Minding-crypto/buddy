@@ -1,0 +1,73 @@
+/* TermsAndConditions.css */
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.content-box {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 22px;
+  color: #444;
+  margin-top: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p, ul li {
+    font-size: 14px;
+  }
+}

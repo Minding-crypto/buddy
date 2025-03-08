@@ -13,6 +13,7 @@ import CookiesPolicy from './Pages/CookiesPolicy';
 import GardeningGuidelines from './Pages/GardeningGuidelines';
 
 function App() {
+  
   return (
     <div className="App">
       <Router>

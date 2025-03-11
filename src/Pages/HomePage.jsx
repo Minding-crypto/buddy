@@ -104,8 +104,8 @@ useEffect(() => {
   ];
 
   const statistics = [
-    { value: "1+", label: "Daily Seeds Planted" },
-    { value: "1+", label: "Advice Waters Given" },
+    { value: "500+", label: "Daily Seeds Planted" },
+    { value: "1000+", label: "Advice Waters Given" },
     { value: "94%", label: "Feel Supported" }
   ];
 
